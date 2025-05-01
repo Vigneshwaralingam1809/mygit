@@ -1,6 +1,15 @@
 from flask import Flask, request, render_template_string, redirect, send_file
 import pandas as pd
 from test import main
+from flask import Flask
+app = Flask(__name__)  # Make sure your app instance is named 'app'
+
+@app.route('/')
+def hello():
+    return "Hello, World!"
+
+if __name__ == '__main__':
+    app.run(debug=True)
 
 app = Flask(__name__)
 
