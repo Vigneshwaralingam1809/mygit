@@ -1,0 +1,28 @@
+
+name: Daily Git Push Tracker
+
+on:
+  schedule:
+    - cron: '30 16 * * *'   # Runs every day at 00:00 UTC
+  workflow_dispatch:       # Allows manual trigger from GitHub UI
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run the Script
+        run: |
+          python test2.py
