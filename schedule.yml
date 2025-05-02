@@ -2,7 +2,7 @@ name: Daily Git Push Tracker
 
 on:
   schedule:
-    - cron: '0 0 * * *'   # Runs every day at 00:00 UTC
+    - cron: '30 16 * * *'   # Runs every day at 00:00 UTC
   workflow_dispatch:       # Allows manual trigger from GitHub UI
 
 jobs:
