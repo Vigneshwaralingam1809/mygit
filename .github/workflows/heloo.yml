@@ -1,0 +1,9 @@
+name: heloo
+on:
+  schedule: '19 18 * * *'
+jobs: 
+  helloooo
+    run-on: ubuntu-latest
+    steps: 
+      -name: hi
+      run: python heloo.txt
