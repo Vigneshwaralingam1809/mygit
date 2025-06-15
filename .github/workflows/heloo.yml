@@ -6,4 +6,4 @@ jobs:
     run-on: ubuntu-latest
     steps: 
       -name: hi
-      run: python heloo.txt
+      run: "echo heloo.txt"
