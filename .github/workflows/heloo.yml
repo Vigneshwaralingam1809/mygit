@@ -1,9 +1,14 @@
 name: heloo
+
 on:
-  schedule: '19 18 * * *'
-jobs: 
-  helloooo
-    run-on: ubuntu-latest
-    steps: 
-      -name: hi
-      run: "echo heloo.txt"
+  schedule:
+    - cron: '19 18 * * *'   
+  workflow_dispatch:         
+
+jobs:
+  helloooo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Say Hi
+        run: echo "heloo.txt"
